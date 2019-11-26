@@ -1,0 +1,30 @@
+<%include ./partials/header%>
+
+<%if(data.length>0){%>  
+  <center><h4>Update Member Details</h4></center> 
+<div class="container">
+        <form style="display: block;border-style: solid;padding:10px;margin-top:0px;" action="/member/update" method="POST">
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" name="name"  value="<%= data[0].name %>">
+              </div>
+              <div class="form-group col-md-3">
+                <label for="country">Country</label>
+                <input type="text" class="form-control" name="country"value="<%= data[0].country%>">
+              </div>
+              <div class="form-group col-md-3">
+                <label for="language">Language</label>
+                <input type="text" class="form-control" name="language" placeholder="Language" value="<%= data[0].language%>">
+              </div>
+              <div class="form-group col-md-3">
+                <label for="salary">Salary</label>
+                <input type="text" class="form-control" name="salary" placeholder="Salary" value="<%= data[0].salary%>">
+              </div>
+              <input type="hidden" name="id" value="<%= data[0].mid %>">
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+          </form>
+        </div>
+<%}%>
+<%include ./partials/footer%>
