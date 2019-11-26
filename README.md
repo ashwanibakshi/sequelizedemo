@@ -1,4 +1,4 @@
-# sequelizeORM
+# sequelizedemo
 
 Install all dependencies
 
